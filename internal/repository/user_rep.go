@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
+	"github.com/DrusGalkin/Auth-gRPC/internal/entity"
 )
 
 type userRepository struct {

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/DrusGalkin/forum-auth-grpc/internal/app"
+import "github.com/DrusGalkin/Auth-gRPC/internal/app"
 
 func main() {
 	go app.Run()

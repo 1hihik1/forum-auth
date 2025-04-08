@@ -1,10 +1,10 @@
 package app
 
 import (
-	"github.com/DrusGalkin/forum-auth-grpc/internal/delivery/gin"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/repository"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/usecase"
-	"github.com/DrusGalkin/forum-auth-grpc/pkg/database"
+	"github.com/DrusGalkin/Auth-gRPC/internal/delivery/gin"
+	"github.com/DrusGalkin/Auth-gRPC/internal/repository"
+	"github.com/DrusGalkin/Auth-gRPC/internal/usecase"
+	"github.com/DrusGalkin/Auth-gRPC/pkg/database"
 	_ "github.com/lib/pq"
 	"log"
 )

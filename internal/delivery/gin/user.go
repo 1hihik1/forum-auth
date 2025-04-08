@@ -1,8 +1,8 @@
 package gin
 
 import (
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/usecase"
+	"github.com/DrusGalkin/Auth-gRPC/internal/entity"
+	"github.com/DrusGalkin/Auth-gRPC/internal/usecase"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
