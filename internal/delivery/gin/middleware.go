@@ -1,7 +1,7 @@
 package gin
 
 import (
-	"github.com/DrusGalkin/auth-grpc/pkg/auth"
+	"github.com/DrusGalkin/forum-auth-grpc/pkg/auth"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"

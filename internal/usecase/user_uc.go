@@ -2,7 +2,7 @@ package usecase
 
 import (
 	"fmt"
-	"github.com/DrusGalkin/auth-grpc/internal/entity"
+	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
 )
 
 type UserUseCase struct {
