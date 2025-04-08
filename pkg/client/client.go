@@ -2,7 +2,7 @@ package client
 
 import (
 	"context"
-	auth "github.com/DrusGalkin/Auth-gRPC/pkg/api/g_rpc"
+	auth "github.com/DrusGalkin/auth-grpc/pkg/api/g_rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

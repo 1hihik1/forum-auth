@@ -1,4 +1,4 @@
-module github.com/DrusGalkin/Auth-gRPC
+module github.com/DrusGalkin/auth-grpc
 
 go 1.23.6
 

@@ -2,8 +2,8 @@ package server
 
 import (
 	"context"
-	auth "github.com/DrusGalkin/Auth-gRPC/pkg/api/g_rpc"
-	jwt "github.com/DrusGalkin/Auth-gRPC/pkg/auth"
+	auth "github.com/DrusGalkin/auth-grpc/pkg/api/g_rpc"
+	jwt "github.com/DrusGalkin/auth-grpc/pkg/auth"
 )
 
 type AuthServer struct {

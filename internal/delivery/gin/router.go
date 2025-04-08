@@ -1,7 +1,7 @@
 package gin
 
 import (
-	"github.com/DrusGalkin/Auth-gRPC/internal/usecase"
+	"github.com/DrusGalkin/auth-grpc/internal/usecase"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"time"

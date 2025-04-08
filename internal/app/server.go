@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/DrusGalkin/Auth-gRPC/internal/server"
-	auth "github.com/DrusGalkin/Auth-gRPC/pkg/api/g_rpc"
+	"github.com/DrusGalkin/auth-grpc/internal/server"
+	auth "github.com/DrusGalkin/auth-grpc/pkg/api/g_rpc"
 	"google.golang.org/grpc"
 	"log"
 	"net"
