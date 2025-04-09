@@ -2,6 +2,7 @@ package client
 
 import (
 	"context"
+	"fmt"
 	auth "github.com/DrusGalkin/forum-auth-grpc/pkg/api/g_rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -13,9 +14,13 @@ type AuthClient struct {
 }
 
 func NewAuthClient(addr string) (*AuthClient, error) {
-	conn, err := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient(
+		addr,
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
+		grpc.WithBlock(),
+	)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to connect to auth service: %w", err)
 	}
 
 	return &AuthClient{
@@ -29,6 +34,7 @@ func (c *AuthClient) Close() {
 }
 
 func (c *AuthClient) ValidateToken(token string) (bool, error) {
+	fmt.Println(token)
 	resp, err := c.service.ValidateToken(context.Background(), &auth.TokenRequest{
 		Token: token,
 	})
