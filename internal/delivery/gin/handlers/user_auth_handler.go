@@ -1,4 +1,4 @@
-package gin
+package handlers
 
 import (
 	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
@@ -21,6 +21,7 @@ type TokenResponse struct {
 	RefreshToken string `json:"refresh_token"`
 	ExpiresIn    int64  `json:"expires_in"`
 	UserID       int    `json:"user_id"`
+	Role         string `json:"role"`
 }
 
 func (h *UserHandler) Login(c *gin.Context) {
@@ -54,6 +55,7 @@ func (h *UserHandler) Login(c *gin.Context) {
 		RefreshToken: refreshToken,
 		ExpiresIn:    expiresIn,
 		UserID:       user.ID,
+		Role:         user.Role,
 	})
 }
 

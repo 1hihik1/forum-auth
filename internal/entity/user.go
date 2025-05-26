@@ -5,19 +5,9 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-type UserRepository interface {
-	GetAll() ([]User, error)
-	GetByID(id int) (User, error)
-	GetByEmail(email string) (User, error)
-	Create(user User) (User, error)
-	Update(id int, user User) (User, error)
-	Delete(id int) error
-	CheckPassword(id int, password string) bool
-}
-
 var (
 	ErrorUserNotFound  = errors.New("Пользователь не найден")
-	ErrorWrongPassword = errors.New("Неперный пароль")
+	ErrorWrongPassword = errors.New("Неверный пароль")
 )
 
 type User struct {
@@ -25,7 +15,7 @@ type User struct {
 	Name     string `json:"name"`
 	Email    string `json:"email"`
 	Password string `json:"password" binding:"required"`
-	Active   bool   `json:"active"`
+	Role     string `json:"role"`
 }
 
 func (u *User) HashPassword() error {

@@ -6,17 +6,13 @@ import (
 	"github.com/DrusGalkin/forum-auth-grpc/pkg/auth"
 )
 
-func (uc *UserUseCase) Authenticate(email, password string) (string, string, int64, error) {
+func (uc *UserUseCase) Authenticate(email string, password string) (string, string, int64, error) {
 	user, err := uc.repo.GetByEmail(email)
 	if err != nil {
 		if err == entity.ErrorUserNotFound {
 			return "", "", 0, entity.ErrorWrongPassword
 		}
 		return "", "", 0, err
-	}
-
-	if !user.Active {
-		return "", "", 0, fmt.Errorf("пользователь не активен")
 	}
 
 	if err := user.CheckPassword(password); err != nil {

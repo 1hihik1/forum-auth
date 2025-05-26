@@ -1,13 +1,17 @@
 package gin
 
 import (
+	_ "github.com/DrusGalkin/forum-auth-grpc/docs"
+	"github.com/DrusGalkin/forum-auth-grpc/internal/delivery/gin/handlers"
 	"github.com/DrusGalkin/forum-auth-grpc/internal/usecase"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"time"
 )
 
-func SetupRouter(userUseCase *usecase.UserUseCase) *gin.Engine {
+func SetupRouter(userUseCase usecase.UseCase) *gin.Engine {
 	router := gin.Default()
 	router.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://localhost:3000"},
@@ -18,7 +22,7 @@ func SetupRouter(userUseCase *usecase.UserUseCase) *gin.Engine {
 		MaxAge:           12 * time.Hour,
 	}))
 
-	userHandler := NewUserHandler(userUseCase)
+	userHandler := handlers.NewUserHandler(userUseCase)
 	api := router.Group("/api/v1")
 	{
 		api.POST("/login", userHandler.Login)
@@ -27,7 +31,7 @@ func SetupRouter(userUseCase *usecase.UserUseCase) *gin.Engine {
 		api.GET("/users", userHandler.GetAll)
 		api.GET("/user/:id", userHandler.GetByID)
 		auth := api.Group("/")
-		auth.Use(AuthMiddleware())
+		auth.Use(handlers.AuthMiddleware())
 		{
 			auth.GET("/users/:email", userHandler.GetByEmail)
 			auth.PUT("/users/:id", userHandler.UpdatePassword)
@@ -35,5 +39,6 @@ func SetupRouter(userUseCase *usecase.UserUseCase) *gin.Engine {
 			auth.POST("/user/:id", userHandler.CheckPassword)
 		}
 	}
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	return router
 }
