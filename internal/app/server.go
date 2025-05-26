@@ -1,9 +1,9 @@
 package app
 
 import (
-	auth "github.com/DrusGalkin/forum-auth-grpc/pkg/api/g_rpc"
-	"github.com/DrusGalkin/forum-auth-grpc/pkg/logger"
-	"github.com/DrusGalkin/forum-auth-grpc/pkg/server"
+	auth "github.com/1hihik1/forum-auth/pkg/api/g_rpc"
+	"github.com/1hihik1/forum-auth/pkg/logger"
+	"github.com/1hihik1/forum-auth/pkg/server"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"net"

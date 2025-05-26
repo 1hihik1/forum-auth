@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 	"fmt"
-	auth "github.com/DrusGalkin/forum-auth-grpc/pkg/api/g_rpc"
+	auth "github.com/1hihik1/forum-auth/pkg/api/g_rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/usecase"
+	"github.com/1hihik1/forum-auth/internal/entity"
+	"github.com/1hihik1/forum-auth/internal/usecase"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"

@@ -2,8 +2,8 @@ package usecase
 
 import (
 	"fmt"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/repository"
+	"github.com/1hihik1/forum-auth/internal/entity"
+	"github.com/1hihik1/forum-auth/internal/repository"
 )
 
 type UseCase interface {

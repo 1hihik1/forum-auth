@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
-	"github.com/DrusGalkin/forum-auth-grpc/pkg/logger"
+	"github.com/1hihik1/forum-auth/internal/entity"
+	"github.com/1hihik1/forum-auth/pkg/logger"
 	"go.uber.org/zap"
 )
 

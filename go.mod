@@ -1,4 +1,4 @@
-module github.com/DrusGalkin/forum-auth-grpc
+module github.com/1hihik1/forum-auth
 
 go 1.23.6
 

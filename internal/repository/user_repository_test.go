@@ -4,11 +4,11 @@ import (
 	"database/sql"
 	"errors"
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/DrusGalkin/forum-auth-grpc/pkg/logger"
+	"github.com/1hihik1/forum-auth/pkg/logger"
 	"go.uber.org/zap"
 	"testing"
 
-	"github.com/DrusGalkin/forum-auth-grpc/internal/entity"
+	"github.com/1hihik1/forum-auth/internal/entity"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

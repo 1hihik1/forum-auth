@@ -1,6 +1,6 @@
 package main
 
-import "github.com/DrusGalkin/forum-auth-grpc/internal/app"
+import "github.com/1hihik1/forum-auth/internal/app"
 
 func main() {
 	app.LoggerRun()

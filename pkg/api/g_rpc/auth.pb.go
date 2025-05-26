@@ -185,7 +185,7 @@ const file_auth_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\tR\x05error2\x82\x01\n" +
 	"\vAuthService\x12:\n" +
 	"\rValidateToken\x12\x12.auth.TokenRequest\x1a\x13.auth.TokenResponse\"\x00\x127\n" +
-	"\tGetUserID\x12\x12.auth.TokenRequest\x1a\x14.auth.UserIDResponse\"\x00B9Z7github.com/DrusGalkin/forum/backend/auth/pkg/g_rpc;authb\x06proto3"
+	"\tGetUserID\x12\x12.auth.TokenRequest\x1a\x14.auth.UserIDResponse\"\x00B9Z7github.com/1hihik1/forum/backend/auth/pkg/g_rpc;authb\x06proto3"
 
 var (
 	file_auth_proto_rawDescOnce sync.Once
